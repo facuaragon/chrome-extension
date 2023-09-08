@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Mi primera extension de chrome",
+    "version": "1.0.0",
+    "description": "esta es mi primera extension de chrome",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+      },
+      "permissions": ["topSites", "favicon", "geolocation"]
+}
