@@ -1,11 +1,16 @@
+import "./dolars.css";
 import DolarCard from "../DolarCard/DolarCard";
 
-export default function Dolares({ dolars }) {
+export default function Dolars({ dolars }) {
   return (
-    <>
-      {dolars.map((dolar, i) => (
-        <DolarCard key={i} dolar={dolar} />
-      ))}
-    </>
+    <div className="container-dolars">
+      <ul className="ul-list">
+        {dolars.map((dolar, i) => (
+          <li key={i}>
+            <DolarCard dolar={dolar} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

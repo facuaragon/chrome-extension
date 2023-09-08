@@ -23,27 +23,28 @@ import Wind from "./wind";
 // };
 
 export const WeatherIcons = ({ name, width, height, fill }) => {
+  let newName = name;
   const iconList = {
     clearDay: <ClearDay />,
     clearNight: <ClearNight />,
     cloudy: <Cloudy />,
     fog: <Fog />,
     partlyCloudyDay: <PartlyCloudyDay />,
-    PartlyCloudyNight: <PartlyCloudyNight />,
+    partlyCloudyNight: <PartlyCloudyNight />,
     rain: <Rain />,
     snow: <Snow />,
     wind: <Wind />,
   };
-  if (name === "partly-cloudy-day") {
-    name = "partlyCloudyDay";
-  } else if (name === "partly-cloudy-night") {
-    name = "partlyCloudyNight";
-  } else if (name === "clear-day") {
-    name = "clearDay";
-  } else if (name === "clear-night") {
-    name = "clearNight";
+  if (newName === "partly-cloudy-day") {
+    newName = "partlyCloudyDay";
+  } else if (newName === "partly-cloudy-night") {
+    newName = "partlyCloudyNight";
+  } else if (newName === "clear-day") {
+    newName = "clearDay";
+  } else if (newName === "clear-night") {
+    newName = "clearNight";
   }
-  const iconComponent = iconList[name];
+  const iconComponent = iconList[newName];
   if (!iconComponent) {
     return null;
   } else {

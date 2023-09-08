@@ -1,20 +1,21 @@
+import "./dolarCard.css";
 export default function DolarCard({ dolar }) {
   return (
     <>
-      <div>
-        <div>{dolar.nombre}</div>
-        <div>
+      <div className="container">
+        <a className="link" href="https://www.lanacion.com.ar/dolar-hoy">
+          <h2 className="title">{dolar.nombre}</h2>
+        </a>
+        <p className="prices">
           {dolar.casa !== "solidario" && (
-            <div>
-              <div>Compra</div>
-              <div>{dolar.compra}</div>
-            </div>
+            <>
+              <span className="subtitle">Compra</span>
+              <strong className="price">{`$${dolar.compra.toFixed(2)}`}</strong>
+            </>
           )}
-          <div>
-            <div>Venta</div>
-            <div>{dolar.venta}</div>
-          </div>
-        </div>
+          <span className="subtitle">Venta</span>
+          <strong className="price">{`$${dolar.venta.toFixed(2)}`}</strong>
+        </p>
       </div>
     </>
   );
