@@ -5,8 +5,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import WeatherCard from "./components/WeatherCard/WeatherCard";
 import Dolars from "./components/Dolars/Dolars";
 
-const API_WEATHER =
-  process.env.REACT_APP_API_KEY || "M7PT57DUDBLXBNYKJ35J85RY4";
+const API_WEATHER = process.env.REACT_APP_API_KEY;
 
 function App() {
   const [weather, setWeather] = useState();
